@@ -8,14 +8,14 @@ Often we cannot list all of the elements.
 For example, "the set of all real numbers whose square is less than 2" can be expressed as
 
 $$
-\{x | x \text{ a real nnumber}, x^2 < 2\}
+\{x | x \text{ a real number}, x^2 < 2\}
 $$
 
-\noindent where $|$ is read as "such that."
+\noindent where $|$ is read as ``such that.''
 
 The \textit{empty set}, $\emptyset$, is a set with no objects.
 
-If $s$ is in set $S$, we say "$s$ belongs to $S$" and denote it as $s \in S$.
+If $s$ is in set $S$, we say ``$s$ belongs to $S$'' and denote it as $s \in S$.
 Conversely, if $s$ is not in $S$, it is denoted as $s \notin S$.
 
 Two sets are \textit{equal} when they contain exactly the same elements.
@@ -23,3 +23,42 @@ $T$ is a subset of $S$ if all elements of $T$ also belong to $S$; this relations
 The empty set is a subset of all sets.
 
 \subsection{Proofs}
+
+The purpose of a \textbf{proof} is to provide a convincing, logical justification of an opinion.
+
+The notation $P \implies Q$ translates to ``statement $P$ implies statement $Q$.''
+It can also be read as \begin{itemize}
+    \item ``if $P$, then $Q$''
+    \item ``$Q$ if $P$''
+    \item ``$P$ only if $Q$''
+\end{itemize}
+\noindent{}Note that $P \implies Q$ does not necessitate that $Q \implies P$.
+If this were the case, use the notation $P \iff Q$ which translates to ``$P$ if and only if $Q$''.
+
+The notation for negation, e.g. ``not $P$,'' is $\bar{P}$.
+
+With this notation, the following is logically true: if $P \implies Q$, then $\bar{Q} \implies \bar{P}$.
+
+\subsubsection*{Example 1.2}
+
+Proving the following statement: ``The square of an odd integer is odd.''
+
+\begin{proof}
+    Let $n$ be an odd integer.
+    Then $n$ is 1 more than an even integer, so $n = 1 + 2m$ for some integer $m$ (odd or event).
+    Then $n^2 = (1+2m)^2 = 1 + 4m +4m^2 = 1 + 4(m + m^2)$.
+    $4(m + m^2)$ is even, therefore that $+1$ is odd, showing $n^2$ is odd.
+\end{proof}
+
+This could have been written as:
+
+$$
+n \text{ odd} \implies n = 1 + 2m\ \forall\ m \in \mathbb{N} \implies n^2 = 1 + 4(m+m^2) \implies n^2 \text{ odd}
+$$
+
+\noindent{}but it is more difficult to read.
+Therefore, it is common (encouraged?) to include explanatory English text in a proof.
+
+This is an example of a \textit{direct proof} because it proceeds from assumptions to conclusions via a series of implications.
+
+%  TODO: on the section of proof by contradiction
